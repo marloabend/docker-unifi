@@ -1,4 +1,4 @@
-.PHONY: prod remove-data
+.PHONY: prod clean
 
 prod: detached
 
@@ -14,13 +14,10 @@ down:
 shell-controller:
 	@-docker-compose -f docker-compose.yml exec controller sh
 
-remove-lib:
-	sudo rm -rf ./data/lib
-
-remove-logs:
-	sudo rm -rf ./data/log
+remove-data:
+	@sudo rm -rf ./data/unifi
 
 remove-runtime:
-	sudo rm -rf ./data/lib
+	@sudo rm -rf ./data/lib
 
-remove-data: remove-lib remove-logs remove-runtime
+clean: remove-data remove-runtime

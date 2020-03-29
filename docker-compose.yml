@@ -7,8 +7,7 @@ services:
     image: jacobalberty/unifi:${CONTROLLER_VERSION}
     restart: unless-stopped
     volumes:
-      - './data/lib:/var/lib/unifi'
-      - './data/log:/var/log/unifi'
+      - './data/unifi:/unifi'
       - './data/run:/var/run/unifi'
     ports:
       # - '5514:5514/tcp' # Remote logging
@@ -21,6 +20,9 @@ services:
       # - '1900:1900/udp' # L2 Networks
       - '3478:3478/udp'
     environment:
+      - RUNAS_UID0=${RUNAS_UID0}
+      - UNIFI_UID=${UNIFI_UID}
+      - UNIFI_GID=${UNIFI_GID}
       - TZ=${TZ}
     labels:
       - 'unifi-controller'
