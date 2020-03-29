@@ -1,21 +1,26 @@
-version: "2"
+version: '3'
+
 services:
+
   controller:
-    image: linuxserver/unifi-controller:LTS
-    container_name: controller
-    environment:
-      - PUID=1000
-      - PGID=1000
-      # - MEM_LIMIT=1024M
+    container_name: unifi.controller-${CONTROLLER_VERSION}
+    image: jacobalberty/unifi:${CONTROLLER_VERSION}
+    restart: unless-stopped
     volumes:
-      - "./config:/config"
+      - './data/lib:/var/lib/unifi'
+      - './data/log:/var/log/unifi'
+      - './data/run:/var/run/unifi'
     ports:
-      - 3478:3478/udp
-      - 10001:10001/udp
-      - 8080:8080
-      - 8081:8081
-      - 8443:8443
-      - 8843:8843
-      - 8880:8880
-      - 6789:6789
-    restart: always
+      # - '5514:5514/tcp' # Remote logging
+      - '8080:8080/tcp'
+      - '8443:8443/tcp'
+      - '8880:8880/tcp'
+      - '8843:8843/tcp'
+      - '6789:6789/tcp'
+      - '10001:10001/udp'
+      # - '1900:1900/udp' # L2 Networks
+      - '3478:3478/udp'
+    environment:
+      - TZ=${TZ}
+    labels:
+      - 'unifi-controller'

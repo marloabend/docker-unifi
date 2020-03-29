@@ -4,7 +4,9 @@ Unifi tools running on docker
 # Quick Start
 run `make` to start all services.
 
-# Ports
+# Unifi Controller
+
+### Ports
 | COM | Port      | Usage                                                               |
 | --- | --------- | ------------------------------------------------------------------- |
 | TCP | 5514      | remote syslog capture                                               |
@@ -17,3 +19,4 @@ run `make` to start all services.
 | UDP | 5656-5699 | used by AP-EDU broadcasting                                         |
 | UDP | 10001     | device discovery                                                    |
 | UDP | 1900      | "Make controller discoverable on L2 network" in controller settings |
+| UDP | 3478      | Used for STUN                                                       |
