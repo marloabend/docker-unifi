@@ -18,6 +18,6 @@ remove-data:
 	@sudo rm -rf ./data/unifi
 
 remove-runtime:
-	@sudo rm -rf ./data/lib
+	@sudo rm -rf ./data/run
 
 clean: remove-data remove-runtime
