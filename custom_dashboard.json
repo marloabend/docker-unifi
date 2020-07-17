@@ -1,0 +1,71 @@
+{
+    "name": "Custom Dashboard",
+    "controller_version": "5.11.29",
+    "cmd": "update-dashboard",
+    "modules": [{
+        "id": "default:mega|status",
+        "module_id": "mega|status",
+        "restrictions": {
+            "removable": false,
+            "draggable": false
+        },
+        "config": {}
+    }, {
+        "module_id": "clients|freq-distribution",
+        "config": {},
+        "id": "8f6a20e0-5f18-4240-a625-ca80075fb4e5"
+    }, {
+        "module_id": "devices|usw|top5|active",
+        "config": {},
+        "id": "2e68fb01-2186-4ad0-ab24-4b4de143892e"
+    }, {
+        "module_id": "utilization|routing",
+        "config": {},
+        "id": "3c1b9ce0-91f9-405a-8a53-c36aa6f085c1"
+    }, {
+        "module_id": "devices|uap|top5|cpu",
+        "config": {},
+        "id": "dc35746c-2319-4798-9143-0d72b1f552ef"
+    }, {
+        "module_id": "summary|wifi",
+        "config": {},
+        "id": "f4a36b6b-2ac6-4150-b125-ac6547141d3b"
+    }, {
+        "module_id": "summary|switching",
+        "config": {},
+        "id": "6d3d4444-3418-4722-bd91-029328b566cf"
+    }, {
+        "module_id": "wifi-association-failures",
+        "config": {},
+        "id": "3d386b52-a856-44a9-adf4-621ece4d6593"
+    }, {
+        "module_id": "devices|uap|top5|client-count",
+        "config": {},
+        "id": "f3fd5695-d320-4735-9196-794067d3f26b"
+    }, {
+        "module_id": "clients|top5|active",
+        "config": {},
+        "id": "35d1a815-4b21-4f28-81a7-b1427f0da93b"
+    }, {
+        "module_id": "dpi|top5|donut-cats",
+        "config": {},
+        "id": "279bc1e9-ade3-4d59-b24b-09f4e2d0cfc0"
+    }, {
+        "module_id": "devices|uap|top5|interference",
+        "config": {},
+        "id": "f38abbeb-bc56-4d1b-a627-f40d0b0196fd"
+    }, {
+        "module_id": "vpn|list",
+        "config": {
+            "overviewSortBy": "status",
+            "overviewSortDesc": false,
+            "siteToSiteSortBy": "status",
+            "siteToSiteSortDesc": false
+        },
+        "id": "5591bdd2-6440-4441-a1d8-836d6300445b"
+    }, {
+        "module_id": "speed-test",
+        "config": {},
+        "id": "bef54b3f-5131-49ec-8600-77511811b9a7"
+    }]
+}
